@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: white;
+}
+body {
+    background-color: #322B48;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 1rem;
+}
+
+.movie {
+    position: relative;
+    width: 300px;
+    height: 460px;
+    background: #0c0c25ae;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+}
+
+.overview {
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    padding: 1rem;
+    line-height: 22px;
+    background: rgba(255, 255, 255, 0.936);
+    color: black;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: 100ms transform ease-in;
+}
+
+.overview .title {
+    border-bottom: solid #1b287a 3px;
+    color: #000e6b;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.movie:hover .overview{
+    transform: scaleY(1);
+}
+
+.movie img {
+    width: 100%;
+    height: 90%;
+}
+
+.movie_info {
+    display: flex;  
+    justify-content: space-between;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.movie_info .rate{ 
+    padding: 3px 5px;
+    background: rgba(255, 255, 255, 0.654);
+}
+
+.green{
+    color: rgb(79, 255, 79);
+}
+
+.red{
+    color: rgb(213, 21, 21);
+}
+
+
+.orange{
+    color: rgb(242, 242, 24);
+}
+
+
+/* Header */
+
+header {
+    margin-top: 0;
+    background-color: rgba(255, 255, 255, 0.119);
+    border-bottom: solid rgba(0, 0, 0, 0.3) 1.5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    width: 100%;
+    height: 70px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 100%;
+}
+
+
+header nav .logo {
+    font-size: 22px;
+}
+
+header nav .search {
+    width: 340px;
+    height: 45px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.161);
+}
+
+header nav .search input {
+    background: transparent;
+    border: 0;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    font-weight: 400;
+}
+
+header nav .search input::placeholder {
+    color: white;
+    text-align: center;
+}
