@@ -93,6 +93,7 @@ header {
     font-weight: bolder;
     width: 100%;
     height: 70px;
+    transition: 200ms;
 }
 
 header nav {
@@ -104,8 +105,9 @@ header nav {
 }
 
 
-header nav .logo {
+header nav .logo,a {
     font-size: 22px;
+    text-decoration: none;
 }
 
 header nav .search {
@@ -115,8 +117,17 @@ header nav .search {
     background-color: rgba(255, 255, 255, 0.161);
 }
 
-header nav .search input {
+.sticky {
+    position: fixed !important;
+    background: #100d1e !important;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header nav .search input, form {
     background: transparent;
+    padding-left: 4px;
     border: 0;
     outline: none;
     width: 100%;
@@ -127,4 +138,41 @@ header nav .search input {
 header nav .search input::placeholder {
     color: white;
     text-align: center;
+}
+
+h5{
+    opacity: 0;
+}
+
+
+@media screen and (max-width:650px) {
+    header {
+        padding: 1rem 0 ;
+        text-align: center;
+        height: 80px;
+    }
+
+    .movie {
+        width: 230px;
+        height: 340px;
+    }
+
+    .movie_info {
+        margin: 0 2px !important;
+        font-size: 15px;
+    }
+
+    .overview{
+        line-height: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        justify-content: center !important;
+        padding: 0 !important;
+    }
+
+    .search {
+        margin-top: 10px !important;
+    }
 }
