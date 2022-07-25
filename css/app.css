@@ -82,7 +82,41 @@ main {
     color: rgb(242, 242, 24);
 }
 
+.notFound {
+    color: rgb(183, 183, 184);
+    font-size: 60px;
+    
+}
 
+.auto-com {
+    position: relative;
+    background: rgba(255, 255, 255, 0.907);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    max-height: 500px;
+    width: 100%;
+    overflow: auto;
+    z-index: 100;
+}
+
+.auto-com span {
+    text-align: left;
+    color: rgba(0, 0, 0, 0.751);
+    display: block;
+    padding:1rem;
+    cursor: pointer;
+}
+
+.auto-com strong {
+    color: black;
+}
+
+.auto-com span:hover {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+  background: gray;
+}
 /* Header */
 
 header {
@@ -93,7 +127,7 @@ header {
     font-weight: bolder;
     width: 100%;
     height: 70px;
-    transition: 200ms;
+    transition: all 250ms;
 }
 
 header nav {
